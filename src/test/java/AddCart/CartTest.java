@@ -1,4 +1,4 @@
-package CartTest;
+package AddCart;
 
 import Base.BaseTest;
 import org.junit.jupiter.api.Assertions;
@@ -28,6 +28,16 @@ public class CartTest extends BaseTest {
         storePage.addToCart("Blue Shoes");
         CartPage cartPage = storePage.viewCart();
         Assertions.assertTrue(cartPage.isProductDisplayedInCart(), "Product not displayed");
+    }
+    @Test
+    public void validate_Quantity() throws InterruptedException{
+        AccountPage accountPage = homePage.clickAccount();
+        accountPage.login("cam5266@gmail.com", "123456789");
+        StorePage storePage = accountPage.clickBrowserProduct();
+        storePage.addToCart("Blue Shoes");
+        CartPage cartPage = storePage.viewCart();
+        cartPage.setQuantity("2");
+
     }
 }
 

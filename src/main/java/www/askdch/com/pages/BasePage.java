@@ -58,4 +58,8 @@ public class BasePage {
     public Alert switchToAlert(){
         return driver.switchTo().alert();
     }
+
+    public void clear(By locator){
+        findElement(locator).clear();
+    }
 }
