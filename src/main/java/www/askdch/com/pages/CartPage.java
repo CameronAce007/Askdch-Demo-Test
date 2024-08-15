@@ -29,9 +29,7 @@ public class CartPage extends BasePage{
         clickElement(checkoutField);
         return new CheckoutPage(driver);
     }
-    String getPriceText(){
-        
-    }
+
 
 }
 
